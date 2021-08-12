@@ -1,0 +1,3 @@
+#+title: hugo-tailwind-zettelwiki
+
+a theme for wikis and zettelkasten notes built on tailwindcss.
