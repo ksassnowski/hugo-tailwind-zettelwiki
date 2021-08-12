@@ -37,8 +37,8 @@ jobs:
             ${{ runner.os }}-node-
 
       - run: npm ci
-      #- run: npm i -g postcss postcss-cli
-      - run: npm install
+      - run: npm ci -g postcss postcss-cli
+      #- run: npm install package.json
       - run: hugo --minify --source ./exampleSite --baseURL https://jhilker1.github.io/hugo-tailwind-zettelkasten/
 
       - name: Deploy
