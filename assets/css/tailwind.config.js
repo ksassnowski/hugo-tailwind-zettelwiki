@@ -5,7 +5,11 @@ module.exports = {
   purge: ['layouts/**/*.html'],
   darkMode: 'class', // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        teal: colors.teal
+      },
+    },
   },
   variants: {
     extend: {},
