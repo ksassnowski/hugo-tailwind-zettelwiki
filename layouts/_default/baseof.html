@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
     {{- partial "head.html" . -}}
-    <body>
-        {{- partial "header.html" . -}}
-        <div id="content">
-        {{- block "main" . }}{{- end }}
-        {{- partial "footer.html" . -}}
-    </div>
+    <body class="grid overflow-hidden grid-lines grid-cols-4 grid-rows-3">
+	{{ partial "header.html" . }}
+    <article class="bg-gray-200 text-gray-900 min-h-screen p-3">
+        {{ block "main" . }}
+        {{ end }}
+    </article>
     </body>
 </html>
