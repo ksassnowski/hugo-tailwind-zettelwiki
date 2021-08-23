@@ -2,9 +2,9 @@
 <html>
     {{- partial "head.html" . -}}
     <body>
-	{{ partial "header.html" . }}
-    <div id="content">
-        {{- block "main" . }}{{- end }}
-    </div>
+	{{ partial "navbar/main.html" . }}
+   
+
+  {{- block "main" . }}{{- end }}
     </body>
 </html>
