@@ -3,8 +3,14 @@
   {{- partial "head.html" . -}}
   <body>
 	  {{ partial "navbar/main.html" . }}
-    <div id="content">
-      {{- block "main" . }}{{- end }}
+    <div class="grid overflow-hidden grid-cols-5 grid-rows-3">
+      <div class="bg-red-300 row-span-3 min-h-full">
+        Sidebar
+      </div>
+      <div class="row-span-3 col-span-4 mt-3 min-h-full">
+        {{- block "main" .}}{{- end}}
+        </div>
     </div>
+    {{ partial "footer/main.html" . }}
   </body>
 </html>
