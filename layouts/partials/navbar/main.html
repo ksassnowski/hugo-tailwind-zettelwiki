@@ -1,19 +1,51 @@
-<nav class="bg-red-200">
-  <div class="max-w-full mx-auto border border-purple-600">
+<nav class="bg-gray-200">
+  <div class="max-w-6xl mx-auto">
     <div class="flex justify-between">
-      <!---logo--->
-      <div>
-        <a href="#">
-       <!--
-           Use this section to add a logo.
-           If you want, copy this to your `layouts/partials/navbar` directory, and choose a Heroicon (https://heroicons.com) and add the SVG here.
-           you could also add your own logo.
-         -->
-          
-        </a>
+      <div class="flex space-x-4">
+        
+        <!--Logo goes here-->
+        <div>
+          <a href="#" class="flex items-center px-2 py-5 text-gray-700">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+            </svg>
+            <span>Better Dev</span>
+          </a>
+        </div>
+  
+        <!--Navigation goes here-->
+        <div class="hidden md:flex items-center space-x-3">
+          {{range .Site.Menus.main}}
+          <a href="#" class="px-3 py-5 hover:bg-red-200">{{.Name}}</a>
+          {{ end }}
+        </div>
       </div>
-      <!---Links--->
-      <!--Secondary Nav-->
+
+  
+      <!--Mobile button goes here-->
+      <div class="md:hidden flex items-center">
+        <button id="mobile-menu-button">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
+        </svg>
+        </button> 
       </div>
-      </div>
+ 
+    </div>
+  </div>
+
+  <div class="hidden" id="mobile-menu">
+    {{ range .Site.Menus.main}}
+    <a class="block py-2 px-4 text-sm" href="">Name</a>
+    {{ end }}
+  </div>
 </nav>
+
+<script>
+let btn = document.getElementById("mobile-menu-button");
+let menu = document.getElementById("mobile-menu");
+
+btn.addEventListener("click", () => {
+    menu.classList.toggle("hidden")
+});
+</script>

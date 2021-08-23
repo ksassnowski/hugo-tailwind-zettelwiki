@@ -1,5 +1,5 @@
 baseURL = "https://gohugo.io"
-title = "Hugo Themes"
+title = "Hugo Tailwind-Zettelwiki"
 author = "Steve Francia"
 copyright = "Copyright © 2008–2019, Steve Francia and the Hugo Authors; all rights reserved."
 paginate = 3
@@ -19,6 +19,14 @@ themesDir = "../../"
     name = "About"
     url = "/about/"
     weight = 10
+
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/post/"
+    weight = 20
+
+
 
 [taxonomies]
 category = "categories"
