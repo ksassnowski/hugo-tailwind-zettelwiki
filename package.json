@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "NODE_ENV=development ./node_modules/tailwindcss/lib/cli.js -i ./exampleSite/static/style.css -o ./exampleSite/static/main.css --jit -w",
+    "build": "NODE_ENV=production ./node_modules/tailwindcss/lib/cli.js -i ./exampleSite/static/style.css -o ./exampleSite/static/main.css --jit --minify"
   },
   "keywords": [],
   "author": "",
