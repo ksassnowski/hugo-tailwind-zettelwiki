@@ -35,7 +35,7 @@ jobs:
       - name: Build tailwind
         run: npm run build
 
-      - name: Build
+      - name: Build hugo
         run: hugo --minify --gc --destination ../public --source ./exampleSite --themesDir ../.. --baseURL https://jhilker1.github.io/hugo-tailwind-zettelwiki/
 
       - name: Deploy
